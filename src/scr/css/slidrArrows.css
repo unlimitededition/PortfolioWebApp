@@ -1,0 +1,15 @@
+// Customizing a specific controller arrow.
+aside[id="{slidr-id}-control"] .slidr-control.right {
+  width: 50px !important;
+  height: 50px !important;
+  top: 50% !important;
+  margin-top: -25px !important;
+  right: -25px !important;
+  border-radius: 25px;
+  background: url('/static/images/slidr/arrow_right.png') 14px 13px no-repeat black;
+  opacity: 0.4;
+}
+
+aside[id="{slidr-id}-control"] .slidr-control.right:hover {
+  opacity: 1;
+}

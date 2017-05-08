@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular QuickStart</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('main.js').catch(function(err){ console.error(err); });
+    </script>
+
+    <!-- Style -->
+    <style type="text/css">
+    </style>
+
+    <!-- Layout -->
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      #content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      #slidr {
+        height: 540px;
+        width: 100%;
+      }
+
+      #slidr > div {
+        width: 100%;
+        height: 100%;
+      }
+
+      div[data-slidr="intro"] {
+        background: #C8B58D;
+        background: none;
+      }
+      div[data-slidr="info"] {
+        background: #F2CA8D;
+        background: none;
+      }
+      div[data-slidr="about"] {
+        background: #E1D4C3;
+        background: none;
+      }
+      div[data-slidr="build"] {
+        background: #DCC2A1;
+        background: none;
+      }
+      div[data-slidr="people"] {
+        background: #B1905D;
+        background: none;
+      }
+      div[data-slidr="feed"] {
+        background: #bbbbbb;
+        background: none;
+      }
+    </style>
+  </head>
+
+  <body>
+
+  <logo></logo>
+
+  <div id="content">
+    <div id="slidr">
+        <div data-slidr="intro">
+          <page-intro>Introduction</page-intro>
+        </div>
+        <div data-slidr="info">
+          <page-info>Information</page-info>
+        </div>
+        <div data-slidr="about">
+          <page-about>About</page-about>
+        </div>
+        <div data-slidr="build">
+          <page-build>Building</page-build>
+        </div>
+        <div data-slidr="people">
+          <page-people>People</page-people>
+        </div>
+        <div data-slidr="feed">
+          <page-feed>Feed</page-feed>
+        </div>
+    </div>
+  </div>
+
+  <div id="footer" style="position: fixed; bottom: 50px; height: 35px; width: 100%;">
+      <div id="lb" style="text-align: center; float: left; background: #999; height: 100%; width: 100px;" onclick="moveLeft();">Left</div>
+      <div id="rb" style="text-align: center; float: right; background: #999; height: 100%; width: 100px;" onclick="moveRight();">Right</div>
+  </div>
+
+  <script type="text/javascript" src="http://bchanx.com/static/dist/js/lib/slidr.min.js"></script>
+  <script>
+    var sMain = slidr.create('slidr', {
+      after: function(e) { console.log('in: ' + e.in.slidr); },
+      before: function(e) { console.log('out: ' + e.out.slidr); },
+      breadcrumbs: false,
+      controls: 'none',
+      direction: 'horizontal',
+      fade: false,
+      keyboard: true,
+      overflow: true,
+      pause: false,
+      theme: '#222',
+      timing: { 'cube': '0.35s ease-in' },
+      touch: true,
+      transition: 'cube'
+    }).start();
+
+    function moveLeft(){
+      sMain.slide('left');
+    }
+    function moveRight(){
+      sMain.slide('right');
+    }
+
+</script>
+</html>
