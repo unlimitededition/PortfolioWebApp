@@ -9,18 +9,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var animations_1 = require("@angular/platform-browser/animations");
-// About Page
-var pageAbout_component_1 = require("./components/pageAbout.component");
-// Build Page
-var pageBuild_component_1 = require("./components/pageBuild.component");
-// Feed Page
-var pageFeed_component_1 = require("./components/pageFeed.component");
-// Info Page
-var pageInfo_component_1 = require("./components/pageInfo.component");
-// Intro Page
-var pageIntro_component_1 = require("./components/pageIntro.component");
 var logo_component_1 = require("./components/logo.component");
-// People Page
+var pageAbout_component_1 = require("./components/pageAbout.component");
+var pageBuild_component_1 = require("./components/pageBuild.component");
+var pageFeed_component_1 = require("./components/pageFeed.component");
+var pageInfo_component_1 = require("./components/pageInfo.component");
+var pageIntro_component_1 = require("./components/pageIntro.component");
 var pagePeople_component_1 = require("./components/pagePeople.component");
 var AppModule = (function () {
     function AppModule() {

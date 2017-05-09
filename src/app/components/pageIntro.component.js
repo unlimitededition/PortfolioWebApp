@@ -16,7 +16,7 @@ var PageIntro = (function () {
 PageIntro = __decorate([
     core_1.Component({
         selector: 'page-intro',
-        template: "\n  \t<h1>This is the {{ page }} Page</h1>\n\t",
+        template: "\n  \t<h1> </h1>\n\t",
     })
 ], PageIntro);
 exports.PageIntro = PageIntro;
