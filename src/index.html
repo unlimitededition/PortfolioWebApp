@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Angular QuickStart</title>
+    <title>Portfolio Web Application</title>
     <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,6 +31,7 @@
       }
 
       #content {
+        position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
@@ -39,6 +40,7 @@
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
+        z-index: -999;
       }
 
       #slidr {
@@ -50,9 +52,37 @@
         width: 100%;
         height: 100%;
       }
+      #f_grad{
+        display: block;
+        height: 35px;
+        background: red;
+        background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
+      #f_gradLine{
+        display: block;
+        height: 14px;
+        background: white;
+        border-top-style: solid;
+        border-top-color: blue;
+        border-top-width: 2px;
+        st
+      }
+
+      .navButton {
+        text-align: center;
+        float: left;
+        height: 35px;
+        width: 100px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+      }
 
       div[data-slidr="intro"] {
-        background: #C8B58D;
+        background: #F2CA8D;
         background: none;
       }
       div[data-slidr="info"] {
@@ -67,6 +97,27 @@
         background: #DCC2A1;
         background: none;
       }
+      div[data-slidr="build-north"] {
+        background: #DCC2A1;
+        background: none;
+      }
+      div[data-slidr="build-path"] {
+        background: #DCC2A1;
+        background: none;
+      }
+      div[data-slidr="build-work"] {
+        background: #DCC2A1;
+        background: none;
+      }
+      div[data-slidr="build-tea"] {
+        background: #DCC2A1;
+        background: none;
+      }
+      div[data-slidr="build-ar"] {
+        background: #DCC2A1;
+        background: none;
+      }
+
       div[data-slidr="people"] {
         background: #B1905D;
         background: none;
@@ -79,8 +130,8 @@
 
     <!-- Video Style -->
     <style>
-      video{ 
-      position: fixed;
+    video{
+      display:static;
       top: 50%;
       left: 50%;
       min-width: 100%;
@@ -89,50 +140,80 @@
       height: auto;
       z-index: -100;
       transform: translateX(-50%) translateY(-50%);
-      background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+      background: url('img/674888138.png') no-repeat;
       background-size: cover;
       transition: 1s opacity;
-      }
+    }
     </style>
   </head>
 
   <body>
-
     <!--
-    <video playsinline autoplay muted loop poster="img/polina.jpg" id="bgvid">
-      <source src="vid/polina.webm" type="video/webm">
-      <source src="vid/polina.mp4" type="video/mp4">
+    <video playsinline autoplay muted loop poster="img/674888138.png" id="bgvid">
+      <source src="vid/674888138.mp4" type="video/mp4">
     </video>
     -->
 
     <div id="content">
       <div id="slidr">
-          <div data-slidr="intro">
-            <page-intro>Introduction</page-intro>
-          </div>
-          <div data-slidr="info">
-            <page-info>Information</page-info>
-          </div>
-          <div data-slidr="about">
-            <page-about>About</page-about>
-          </div>
-          <div data-slidr="build">
-            <page-build>Building</page-build>
-          </div>
-          <div data-slidr="people">
-            <page-people>People</page-people>
-          </div>
-          <div data-slidr="feed">
-            <page-feed>Feed</page-feed>
-          </div>
+        <div data-slidr="intro">
+        <page-intro data-slidr="intro">Introduction</page-intro>
+        </div>
+
+        <div data-slidr="info">
+        <page-info data-slidr="info">Information</page-info>
+        </div>
+
+        <div data-slidr="about">
+        <page-about data-slidr="about">About</page-about>
+        </div>
+
+        <div data-slidr="build">
+          <page-build >Building</page-build>
+        </div>
+
+        <div data-slidr="build-ar">
+          <div>build-ar</div>
+        </div>
+
+        <div data-slidr="build-path">
+          <div>build-path</div>
+        </div>
+
+        <div data-slidr="build-work">
+          <div>build-work</div>
+        </div>
+
+        <div data-slidr="build-tea">
+          <div>build-tea</div>
+        </div>
+
+        <div data-slidr="build-north">
+          <div>build-north</div>
+        </div>
+
+        <div data-slidr="people">
+          <page-people data-slidr="people">People</page-people>
+        </div>
+
+        <div data-slidr="feed">
+          <page-feed data-slidr="feed">Feed</page-feed>
+        </div>
       </div>
     </div>
 
     <logo style="position: static;"></logo>
 
-    <div id="footer" style="position: fixed; bottom: 50px; height: 35px; width: 100%;">
-        <div id="lb" style="text-align: center; float: left; background: #999; height: 100%; width: 100px;" onclick="moveLeft();">Left</div>
-        <div id="rb" style="text-align: center; float: right; background: #999; height: 100%; width: 100px;" onclick="moveRight();">Right</div>
+    <right-bars></right-bars>
+
+    <div id="footer" style="position: fixed; bottom: 0px;  width: 100%; z-index: 999; opacity: 1;">
+        <div id="f_gradLine"> </div>
+        <div style="background: white;">
+          <div id="f_lb" class="navButton" style="float: left;" onclick="moveLeft();">< Left</div>
+          <div id="f_title" style="display: inline; text-align: center;" >M M A</div>
+          <div id="f_rb" class="navButton" style="float: right;" onclick="moveRight();">Right ></div>
+          <div id="f_padding" style="display: block; height: 25px;"></div>
+        </div>
     </div>
 
   </body>
@@ -143,11 +224,11 @@
 
     var sMain = slidr.create('slidr', {
       after: function(e) { 
-        currentPage = e.in.slidr; 
         //console.log('in: ' + e.in.slidr);
       },
       before: function(e) { 
-        //console.log('out: ' + e.out.slidr);
+        currentPage = e.in.slidr;
+        console.log('Moving to: ' + e.in.slidr);
       },
       breadcrumbs: false,
       controls: 'none',
@@ -159,8 +240,11 @@
       theme: '#222',
       timing: { 'cube': '0.35s ease-in' },
       touch: true,
-      transition: 'cube'
-    }).start();
+      transition: 'fade'
+    }).add('h', ['intro', 'info', 'about', "build"])
+      .add('v', ["build-ar", "build-north", "build-path", "build-work", "build-tea", "build"])
+      .add('h', ["build", 'people', "feed"])
+      .start();
 
     function moveLeft(){
       sMain.slide('left');

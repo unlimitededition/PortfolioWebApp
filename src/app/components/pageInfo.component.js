@@ -16,7 +16,7 @@ var PageInfo = (function () {
 PageInfo = __decorate([
     core_1.Component({
         selector: 'page-info',
-        template: "\n  \t<h1>This is the {{ page }} Page</h1>\n\t",
+        template: "\n  \t<h1>{{ page}} </h1>\n\t",
     })
 ], PageInfo);
 exports.PageInfo = PageInfo;

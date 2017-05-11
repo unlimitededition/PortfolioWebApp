@@ -16,7 +16,7 @@ var PageAbout = (function () {
 PageAbout = __decorate([
     core_1.Component({
         selector: 'page-about',
-        template: "\n  \t<h1>This is the {{ page }} Page</h1>\n\t",
+        template: "\n  \t<div>\n  \t<h1>This is the {{ page }} Page</h1>\n  \t</div>\n\t",
     })
 ], PageAbout);
 exports.PageAbout = PageAbout;

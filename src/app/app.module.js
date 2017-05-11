@@ -16,6 +16,7 @@ var pageFeed_component_1 = require("./components/pageFeed.component");
 var pageInfo_component_1 = require("./components/pageInfo.component");
 var pageIntro_component_1 = require("./components/pageIntro.component");
 var pagePeople_component_1 = require("./components/pagePeople.component");
+var rightBars_component_1 = require("./components/rightBars.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -34,7 +35,8 @@ AppModule = __decorate([
             pageInfo_component_1.PageInfo,
             pageIntro_component_1.PageIntro,
             pagePeople_component_1.PagePeople,
-            logo_component_1.Logo
+            logo_component_1.Logo,
+            rightBars_component_1.RightBars
         ],
         bootstrap: [
             pageAbout_component_1.PageAbout,
@@ -43,7 +45,8 @@ AppModule = __decorate([
             pageInfo_component_1.PageInfo,
             pageIntro_component_1.PageIntro,
             pagePeople_component_1.PagePeople,
-            logo_component_1.Logo
+            logo_component_1.Logo,
+            rightBars_component_1.RightBars
         ]
     })
 ], AppModule);

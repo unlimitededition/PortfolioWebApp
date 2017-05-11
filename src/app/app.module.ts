@@ -10,6 +10,7 @@ import { PageFeed }  from './components/pageFeed.component';
 import { PageInfo }  from './components/pageInfo.component';
 import { PageIntro }  from './components/pageIntro.component';
 import { PagePeople }  from './components/pagePeople.component';
+import { RightBars } from './components/rightBars.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { PagePeople }  from './components/pagePeople.component';
   	PageInfo,
   	PageIntro,
   	PagePeople,
-  	Logo
+  	Logo,
+  	RightBars
   ],
   bootstrap: [
 	PageAbout,
@@ -33,7 +35,8 @@ import { PagePeople }  from './components/pagePeople.component';
 	PageInfo,
 	PageIntro,
 	PagePeople,
-	Logo
+	Logo,
+	RightBars
   ]
 })
 export class AppModule { }
